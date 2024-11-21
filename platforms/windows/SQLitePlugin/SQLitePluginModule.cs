@@ -488,10 +488,7 @@ namespace SQLitePlugin
             {
                 var columnName = _sqliteAPI.ColumnName16(statement, i);
                 JSValue columnValue = ExtractColumn(statement, i);
-                if (!columnValue.IsNull)
-                {
-                    row[columnName] = columnValue;
-                }
+                row[columnName] = columnValue;
             }
             return row;
         }
